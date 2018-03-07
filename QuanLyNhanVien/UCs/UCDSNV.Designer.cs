@@ -29,18 +29,14 @@
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtDiem = new System.Windows.Forms.Label();
-            this.txtQueQuan = new System.Windows.Forms.Label();
-            this.txtNamSinh = new System.Windows.Forms.Label();
-            this.txtTen = new System.Windows.Forms.Label();
-            this.txtMaSV = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -51,12 +47,26 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDiem = new System.Windows.Forms.Label();
+            this.txtQueQuan = new System.Windows.Forms.Label();
+            this.txtNamSinh = new System.Windows.Forms.Label();
+            this.txtTen = new System.Windows.Forms.Label();
+            this.txtMaSV = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaCB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Luong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaDC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -75,10 +85,48 @@
             this.toolStrip1.Size = new System.Drawing.Size(692, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = global::QuanLyNhanVien.Properties.Resources.Ampeross_Qetto_2_Add_contact;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(58, 22);
+            this.toolStripButton1.Text = "Thêm";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = global::QuanLyNhanVien.Properties.Resources.Etherbrian_Webuosities_Fix_it;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(46, 22);
+            this.toolStripButton2.Text = "Sửa";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Image = global::QuanLyNhanVien.Properties.Resources.Treetog_Junior_Trash_empty;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(47, 22);
+            this.toolStripButton3.Text = "Xóa";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.Image = global::QuanLyNhanVien.Properties.Resources.Aha_Soft_Large_Business_Zoom;
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(68, 22);
+            this.toolStripButton4.Text = "Chi Tiết";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.textBox11);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.textBox6);
@@ -100,7 +148,6 @@
             this.groupBox1.Controls.Add(this.txtNamSinh);
             this.groupBox1.Controls.Add(this.txtTen);
             this.groupBox1.Controls.Add(this.txtMaSV);
-            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 25);
             this.groupBox1.Name = "groupBox1";
@@ -108,97 +155,33 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết nhân viên";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 237);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(692, 193);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // txtDiem
-            // 
-            this.txtDiem.AutoSize = true;
-            this.txtDiem.Location = new System.Drawing.Point(18, 138);
-            this.txtDiem.Name = "txtDiem";
-            this.txtDiem.Size = new System.Drawing.Size(70, 13);
-            this.txtDiem.TabIndex = 18;
-            this.txtDiem.Text = "Số điện thoại";
-            // 
-            // txtQueQuan
-            // 
-            this.txtQueQuan.AutoSize = true;
-            this.txtQueQuan.Location = new System.Drawing.Point(18, 109);
-            this.txtQueQuan.Name = "txtQueQuan";
-            this.txtQueQuan.Size = new System.Drawing.Size(32, 13);
-            this.txtQueQuan.TabIndex = 17;
-            this.txtQueQuan.Text = "Email";
-            // 
-            // txtNamSinh
-            // 
-            this.txtNamSinh.AutoSize = true;
-            this.txtNamSinh.Location = new System.Drawing.Point(18, 83);
-            this.txtNamSinh.Name = "txtNamSinh";
-            this.txtNamSinh.Size = new System.Drawing.Size(76, 13);
-            this.txtNamSinh.TabIndex = 16;
-            this.txtNamSinh.Text = "Tên nhân viên";
-            // 
-            // txtTen
-            // 
-            this.txtTen.AutoSize = true;
-            this.txtTen.Location = new System.Drawing.Point(18, 57);
-            this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(71, 13);
-            this.txtTen.TabIndex = 15;
-            this.txtTen.Text = "Họ nhân viên";
-            // 
-            // txtMaSV
-            // 
-            this.txtMaSV.AutoSize = true;
-            this.txtMaSV.Location = new System.Drawing.Point(18, 34);
-            this.txtMaSV.Name = "txtMaSV";
-            this.txtMaSV.Size = new System.Drawing.Size(72, 13);
-            this.txtMaSV.TabIndex = 14;
-            this.txtMaSV.Text = "Mã nhân viên";
-            this.txtMaSV.Click += new System.EventHandler(this.txtMaSV_Click);
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(102, 27);
+            this.textBox1.Location = new System.Drawing.Point(102, 28);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(169, 20);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.TabIndex = 35;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
-            // textBox2
+            // textBox11
             // 
-            this.textBox2.Location = new System.Drawing.Point(102, 54);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(169, 20);
-            this.textBox2.TabIndex = 19;
+            this.textBox11.Location = new System.Drawing.Point(102, 161);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(169, 20);
+            this.textBox11.TabIndex = 34;
+            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
-            // textBox3
+            // label6
             // 
-            this.textBox3.Location = new System.Drawing.Point(102, 80);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(169, 20);
-            this.textBox3.TabIndex = 20;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(102, 106);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(169, 20);
-            this.textBox4.TabIndex = 21;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(102, 135);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(169, 20);
-            this.textBox5.TabIndex = 22;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(18, 164);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 13);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Ngày thuê";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // textBox6
             // 
@@ -206,6 +189,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(169, 20);
             this.textBox6.TabIndex = 32;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // textBox7
             // 
@@ -213,6 +197,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(169, 20);
             this.textBox7.TabIndex = 31;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // textBox8
             // 
@@ -220,6 +205,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(169, 20);
             this.textBox8.TabIndex = 30;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // textBox9
             // 
@@ -227,6 +213,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(169, 20);
             this.textBox9.TabIndex = 29;
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // label1
             // 
@@ -236,6 +223,7 @@
             this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 28;
             this.label1.Text = "Thân nhân";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -245,6 +233,7 @@
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 27;
             this.label2.Text = "Địa chỉ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -254,6 +243,7 @@
             this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 26;
             this.label3.Text = "Phòng ban";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -263,6 +253,7 @@
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 25;
             this.label4.Text = "Lương";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -280,55 +271,161 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(169, 20);
             this.textBox10.TabIndex = 23;
+            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
-            // textBox11
+            // textBox5
             // 
-            this.textBox11.Location = new System.Drawing.Point(102, 161);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(169, 20);
-            this.textBox11.TabIndex = 34;
+            this.textBox5.Location = new System.Drawing.Point(102, 135);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(169, 20);
+            this.textBox5.TabIndex = 22;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
-            // label6
+            // textBox4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 164);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 13);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "Ngày thuê";
+            this.textBox4.Location = new System.Drawing.Point(102, 106);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(169, 20);
+            this.textBox4.TabIndex = 21;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // toolStripButton1
+            // textBox3
             // 
-            this.toolStripButton1.Image = global::QuanLyNhanVien.Properties.Resources.Ampeross_Qetto_2_Add_contact;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(58, 22);
-            this.toolStripButton1.Text = "Thêm";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.textBox3.Location = new System.Drawing.Point(102, 80);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(169, 20);
+            this.textBox3.TabIndex = 20;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // toolStripButton2
+            // textBox2
             // 
-            this.toolStripButton2.Image = global::QuanLyNhanVien.Properties.Resources.Etherbrian_Webuosities_Fix_it;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(46, 22);
-            this.toolStripButton2.Text = "Sửa";
+            this.textBox2.Location = new System.Drawing.Point(102, 54);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(169, 20);
+            this.textBox2.TabIndex = 19;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // toolStripButton3
+            // txtDiem
             // 
-            this.toolStripButton3.Image = global::QuanLyNhanVien.Properties.Resources.Treetog_Junior_Trash_empty;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(47, 22);
-            this.toolStripButton3.Text = "Xóa";
+            this.txtDiem.AutoSize = true;
+            this.txtDiem.Location = new System.Drawing.Point(18, 138);
+            this.txtDiem.Name = "txtDiem";
+            this.txtDiem.Size = new System.Drawing.Size(70, 13);
+            this.txtDiem.TabIndex = 18;
+            this.txtDiem.Text = "Số điện thoại";
+            this.txtDiem.Click += new System.EventHandler(this.txtDiem_Click);
             // 
-            // toolStripButton4
+            // txtQueQuan
             // 
-            this.toolStripButton4.Image = global::QuanLyNhanVien.Properties.Resources.Aha_Soft_Large_Business_Zoom;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(77, 22);
-            this.toolStripButton4.Text = "Tìm kiếm";
+            this.txtQueQuan.AutoSize = true;
+            this.txtQueQuan.Location = new System.Drawing.Point(18, 109);
+            this.txtQueQuan.Name = "txtQueQuan";
+            this.txtQueQuan.Size = new System.Drawing.Size(32, 13);
+            this.txtQueQuan.TabIndex = 17;
+            this.txtQueQuan.Text = "Email";
+            this.txtQueQuan.Click += new System.EventHandler(this.txtQueQuan_Click);
+            // 
+            // txtNamSinh
+            // 
+            this.txtNamSinh.AutoSize = true;
+            this.txtNamSinh.Location = new System.Drawing.Point(18, 83);
+            this.txtNamSinh.Name = "txtNamSinh";
+            this.txtNamSinh.Size = new System.Drawing.Size(76, 13);
+            this.txtNamSinh.TabIndex = 16;
+            this.txtNamSinh.Text = "Tên nhân viên";
+            this.txtNamSinh.Click += new System.EventHandler(this.txtNamSinh_Click);
+            // 
+            // txtTen
+            // 
+            this.txtTen.AutoSize = true;
+            this.txtTen.Location = new System.Drawing.Point(18, 57);
+            this.txtTen.Name = "txtTen";
+            this.txtTen.Size = new System.Drawing.Size(71, 13);
+            this.txtTen.TabIndex = 15;
+            this.txtTen.Text = "Họ nhân viên";
+            this.txtTen.Click += new System.EventHandler(this.txtTen_Click);
+            // 
+            // txtMaSV
+            // 
+            this.txtMaSV.AutoSize = true;
+            this.txtMaSV.Location = new System.Drawing.Point(18, 34);
+            this.txtMaSV.Name = "txtMaSV";
+            this.txtMaSV.Size = new System.Drawing.Size(72, 13);
+            this.txtMaSV.TabIndex = 14;
+            this.txtMaSV.Text = "Mã nhân viên";
+            this.txtMaSV.Click += new System.EventHandler(this.txtMaSV_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaNV,
+            this.HoNV,
+            this.TenNV,
+            this.email,
+            this.SDT,
+            this.NgayThue,
+            this.MaCB,
+            this.Luong,
+            this.MaPB,
+            this.MaDC});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 237);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(692, 193);
+            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // MaNV
+            // 
+            this.MaNV.HeaderText = "Mã nhân viên";
+            this.MaNV.Name = "MaNV";
+            // 
+            // HoNV
+            // 
+            this.HoNV.HeaderText = "Họ nhân viên";
+            this.HoNV.Name = "HoNV";
+            // 
+            // TenNV
+            // 
+            this.TenNV.HeaderText = "Tên nhân viên";
+            this.TenNV.Name = "TenNV";
+            // 
+            // email
+            // 
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            // 
+            // SDT
+            // 
+            this.SDT.HeaderText = "Số điện thoại";
+            this.SDT.Name = "SDT";
+            // 
+            // NgayThue
+            // 
+            this.NgayThue.HeaderText = "Ngày thuê";
+            this.NgayThue.Name = "NgayThue";
+            // 
+            // MaCB
+            // 
+            this.MaCB.HeaderText = "Mã cấp bậc";
+            this.MaCB.Name = "MaCB";
+            // 
+            // Luong
+            // 
+            this.Luong.HeaderText = "Lương";
+            this.Luong.Name = "Luong";
+            // 
+            // MaPB
+            // 
+            this.MaPB.HeaderText = "Mã phòng ban";
+            this.MaPB.Name = "MaPB";
+            // 
+            // MaDC
+            // 
+            this.MaDC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaDC.HeaderText = "Mã địa chỉ";
+            this.MaDC.Name = "MaDC";
             // 
             // UCDSNV
             // 
@@ -362,7 +459,6 @@
         private System.Windows.Forms.Label txtNamSinh;
         private System.Windows.Forms.Label txtTen;
         private System.Windows.Forms.Label txtMaSV;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label6;
@@ -380,5 +476,16 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoNV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenNV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayThue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaCB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Luong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaDC;
     }
 }

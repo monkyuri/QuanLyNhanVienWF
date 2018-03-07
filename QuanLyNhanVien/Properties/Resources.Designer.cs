@@ -63,6 +63,36 @@ namespace QuanLyNhanVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _164792945_starry_sky_wallpapers {
+            get {
+                object obj = ResourceManager.GetObject("164792945-starry-sky-wallpapers", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _164792945_starry_sky_wallpapers__1_ {
+            get {
+                object obj = ResourceManager.GetObject("164792945-starry-sky-wallpapers (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _164792945_starry_sky_wallpapers1 {
+            get {
+                object obj = ResourceManager.GetObject("164792945-starry-sky-wallpapers1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Aha_Soft_Large_Business_Zoom {
             get {
                 object obj = ResourceManager.GetObject("Aha-Soft-Large-Business-Zoom", resourceCulture);
@@ -123,6 +153,17 @@ namespace QuanLyNhanVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap light_gray_background_soft_fifteen_shades_of_grey_smooth_background_with_the_addition_of_a_bit_of_noise_r4_eswq9yx_thumbnail_full01 {
+            get {
+                object obj = ResourceManager.GetObject("light-gray-background-soft-fifteen-shades-of-grey-smooth-background-with-the-addi" +
+                        "tion-of-a-bit-of-noise_r4_eswq9yx_thumbnail-full01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Oxygen_Icons_org_Oxygen_Actions_document_edit {
             get {
                 object obj = ResourceManager.GetObject("Oxygen-Icons.org-Oxygen-Actions-document-edit", resourceCulture);
@@ -136,6 +177,16 @@ namespace QuanLyNhanVien.Properties {
         internal static System.Drawing.Bitmap Paomedia_Small_N_Flat_Sign_check {
             get {
                 object obj = ResourceManager.GetObject("Paomedia-Small-N-Flat-Sign-check", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ss {
+            get {
+                object obj = ResourceManager.GetObject("ss", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
