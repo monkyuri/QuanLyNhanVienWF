@@ -1,0 +1,83 @@
+﻿CREATE DATABASE Employee
+GO
+USE Employee
+GO
+CREATE TABLE PhongBan(
+MaPB VARCHAR(10) PRIMARY KEY,
+TenPB NVARCHAR(50),
+DiaDiem NVARCHAR(50),
+MaTP VARCHAR(10)
+)
+GO
+CREATE TABLE NhanVien(
+MaNV VARCHAR(10) PRIMARY KEY,
+TenNV NVARCHAR(50),
+NgaySinh date,
+MaPB VARCHAR(10),
+MaNQL VARCHAR(10),
+Luong int,
+CONSTRAINT NV_PB_FK FOREIGN KEY (MaPB) REFERENCES PhongBan(MaPB)
+)
+GO
+CREATE TABLE Con(
+MaNV VARCHAR(10) PRIMARY KEY,
+TenCon NVARCHAR(50),
+NgaySinhCon DATE,
+GioiTinh NCHAR(10),
+CONSTRAINT Con_NV_FK FOREIGN KEY (MaNV) REFERENCES dbo.NhanVien(MaNV)
+)
+GO
+CREATE TABLE DuAn(
+MaDA VARCHAR(10) PRIMARY KEY,
+TenDA NVARCHAR(50),
+MaPB VARCHAR(10),
+CONSTRAINT DA_PB_FK FOREIGN KEY(MaPB) REFERENCES dbo.PhongBan(MaPB)
+)
+GO
+CREATE TABLE PhanCong(
+MaNV VARCHAR(10),
+MaDA VARCHAR(10),
+SoGio INT,
+PRIMARY KEY(MaNV,MaDA),
+CONSTRAINT PC_NV_FK FOREIGN KEY(MaNV) REFERENCES dbo.NhanVien(MaNV),
+CONSTRAINT PC_DA_FK FOREIGN KEY( MaDA) REFERENCES dbo.DuAn(MaDA)
+)
+GO
+INSERT INTO dbo.PhongBan
+        ( MaPB, TenPB, DiaDiem, MaTP )
+VALUES  ('PB01',N'Phòng ban 1',N'Hà Nội','NV01'),
+('PB02',N'Phòng ban 2',N'Hà Nam','NV02'),
+('PB03',N'Phòng ban 3',N'Hà Tĩnh','NV03')
+GO
+INSERT INTO dbo.NhanVien
+        ( MaNV ,
+          TenNV ,
+          NgaySinh ,
+          MaPB ,
+          MaNQL ,
+          Luong
+        )
+VALUES  ('NV01',N'Nguyễn Văn A','05/05/1997','PB01','NV02',1000000),
+('NV02',N'Nguyễn Văn B','05/05/1997','PB02','NV03',1000000),
+('NV03',N'Nguyễn Văn C','05/05/1997','PB03','NV04',1000000),
+('NV04',N'Nguyễn Văn D','05/05/1997','PB01','NV05',1000000),
+('NV05',N'Nguyễn Văn E','05/05/1997','PB02','NV01',1000000)
+GO
+INSERT INTO dbo.Con
+        ( MaNV, TenCon, NgaySinhCon, GioiTinh )
+VALUES  ( 'NV01',N'Vũ Thị A','05/05/2018',N'Nữ'),
+( 'NV02',N'Vũ Thị B','05/05/2018',N'Nữ'),
+( 'NV03',N'Vũ Thị C','05/05/2018',N'Nữ'),
+( 'NV04',N'Vũ Thị D','05/05/2018',N'Nữ')
+GO
+INSERT INTO dbo.DuAn
+        ( MaDA, TenDA, MaPB )
+VALUES  ( 'DA01',N'Dự án 1','PB01'),
+( 'DA02',N'Dự án 2','PB02'),
+( 'DA03',N'Dự án 3','PB03')
+GO
+INSERT INTO dbo.PhanCong
+        ( MaNV, MaDA, SoGio )
+VALUES  ( 'NV01','DA01',8),
+( 'NV02','DA02',8),
+( 'NV03','DA03',8)
